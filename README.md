@@ -10,7 +10,7 @@ The purpose of `asn_to_ip.sh` is to facilitate the identification of IP blocks a
 
 ### Running asn_to_ip.sh
 
-To use `asn_to_ip.sh`, provide a single ASN as an argument, or pipe a list of ASNs directly into the script.
+To use `asn_to_ip.sh`, provide a single ASN as an argument, or pipe a list of ASNs directly into the script. Optionally, you can use the `-q` flag for quiet mode, which only outputs the IP blocks separated by newlines.
 
 ```bash
 ./asn_to_ip.sh AS12345
@@ -20,6 +20,18 @@ or
 
 ```bash
 cat asns.txt | ./asn_to_ip.sh
+```
+
+To enable quiet mode:
+
+```bash
+./asn_to_ip.sh -q AS12345
+```
+
+or
+
+```bash
+cat asns.txt | ./asn_to_ip.sh -q
 ```
 
 ### Example Usage
@@ -45,6 +57,8 @@ IP blocks for ASN AS67890:
 
 -----------------------------------
 ```
+
+If running in quiet mode, the output will only consist of the IP blocks separated by newlines.
 
 ### Notes
 
